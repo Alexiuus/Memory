@@ -1,23 +1,27 @@
 <div class="container text-center homePage">
-    <div class="Menu">
+    <div [@moveBox]="animateBox ? 'active' : 'inactive'" class="Menu">
         <h1>{{title}}</h1>
+
         <div class="row">
-            <button type="button" class="btn btn-outline-success offset-4 col-4">Start</button>
+            <button type="button" (click)="animateBox = true" class="btn btn-outline-success offset-4 col-4">Start</button>
         </div>
+
         <div class="row">
             <button class="btn btn-outline-warning offset-4 col-4" data-bs-toggle="collapse" data-bs-target="#Rules" aria-expanded="false" aria-controls="Rules">Rules</button>
             <div class="collapse" id="Rules">
                 <div class="card card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor, quam vel facilisis tincidunt, velit velit malesuada massa, a placerat odio velit ac nisi. Sed euismod, metus vitae consectetur dictum, tellus ipsum aliquet erat, sit amet molestie leo ante non sem. Donec auctor, ipsum in interdum aliquet, sapien lacus tristique orci, vel euismod lectus libero eu ligula. Nullam hendrerit sem ut ex dictum dictum. Aliquam erat volutpat. In euismod commodo pellentesque. Sed sed commodo sem. Nam id justo ac neque dictum tempus.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor, quam vel facilisis tincidunt, velit velit malesuada massa, a placerat odio velit ac nisi. Sed euismod, metus vitae consectetur dictum, tellus ipsum aliquet erat, sit amet molestie leo ante non sem. Donec auctor, ipsum in interdum aliquet, sapien lacus tristique orci, vel euismod lectus libero eu ligula. Nullam hendrerit sem ut ex dictum dictum. Aliquam erat volutpat. In euismod commodo pellentesque. Sed sed commodo sem. Nam id justo ac neque dictum tempus.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor, quam vel facilisis tincidunt, velit velit malesuada massa, a placerat odio velit ac nisi. Sed euismod, metus vitae consectetur dictum, tellus ipsum aliquet erat, sit amet molestie leo ante non sem. Donec auctor, ipsum in interdum aliquet, sapien lacus tristique orci, vel euismod lectus libero eu ligula. Nullam hendrerit sem ut ex dictum dictum. Aliquam erat volutpat. In euismod commodo pellentesque. Sed sed commodo sem. Nam id justo ac neque dictum tempus.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor, quam vel facilisis tincidunt, velit velit malesuada massa, a placerat odio velit ac nisi. Sed euismod, metus vitae consectetur dictum, tellus ipsum aliquet erat, sit amet molestie leo ante non sem. Donec auctor, ipsum in interdum aliquet, sapien lacus tristique orci, vel euismod lectus libero eu ligula. Nullam hendrerit sem ut ex dictum dictum. Aliquam erat volutpat. In euismod commodo pellentesque. Sed sed commodo sem. Nam id justo ac neque dictum tempus.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor, quam vel facilisis tincidunt, velit velit malesuada massa, a placerat odio velit ac nisi. Sed euismod, metus vitae consectetur dictum, tellus ipsum aliquet erat, sit amet molestie leo ante non sem. Donec auctor, ipsum in interdum aliquet, sapien lacus tristique orci, vel euismod lectus libero eu ligula. Nullam hendrerit sem ut ex dictum dictum. Aliquam erat volutpat. In euismod commodo pellentesque. Sed sed commodo sem. Nam id justo ac neque dictum tempus.
+                    The player must match 9 cards to win. <br/>
+                    1.    The player will have 2 seconds to memorize the cards and will have 10 seconds to match them. <br/>
+                    2.    The player will have 3 lives, these will be lost for each mistake they make. <br/>
+                    You will win if you manage to match all the cards.
                 </div>
             </div>
         </div>
     </div>
 
+    <app-card-game [ngStyle]="{'display': animateBox ? 'block' : 'none'}" class="box"></app-card-game>
+    
+    <!--Animation-->
     <div class="images" >
         <ng-container *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
             <img class="image-moving" src={{urlImage}} alt="f">
