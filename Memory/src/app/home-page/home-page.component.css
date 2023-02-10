@@ -1,0 +1,131 @@
+@import url('https://fonts.cdnfonts.com/css/korean-calligraphy');
+
+.homePage{
+    height: 100%;
+}
+
+.row {
+    margin-bottom: 10px;
+}
+
+.Menu {
+    position: relative;
+    background-color: white;
+    border: 1px solid;
+    border-color: black;
+    margin-top: 30vh;
+    font-family: 'Korean Calligraphy', sans-serif;
+    border-radius: 10px;
+    z-index: 1;
+    vertical-align: 10%;
+}
+
+.image-moving{
+    position: absolute;
+    bottom: 1000px;
+    z-index: -1;
+    animation: image-move 5s linear infinite ;
+}
+
+.image-moving:nth-child(1){
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 5s;
+    animation-delay: 3s;
+}
+
+.image-moving:nth-child(2){
+    width: 80px;
+    height: 80px;
+    left: 35%;
+    animation-duration: 5s;
+    animation-delay: 2s;
+}
+.image-moving:nth-child(3){
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    animation-duration: 5s;
+    animation-delay: 2.2s;
+}
+.image-moving:nth-child(4){
+    width: 80px;
+    height: 80px;
+    left: 90%;
+    animation-duration: 5s;
+    animation-delay: 3.6s;
+}
+.image-moving:nth-child(5){
+    width: 80px;
+    height: 80px;
+    left: 70%;
+    animation-duration: 5s;
+    animation-delay: 4s;
+}
+
+.image-moving:nth-child(6){
+    width: 80px;
+    height: 80px;
+    left: 20%;
+    animation-duration: 5s;
+    animation-delay: 4.4s;
+}
+
+.image-moving:nth-child(7){
+    width: 80px;
+    height: 80px;
+    left: 40%;
+    animation-duration: 5s;
+    animation-delay: 5s;
+}
+
+.image-moving:nth-child(8){
+    width: 80px;
+    height: 80px;
+    left: 80%;
+    animation-duration: 5s;
+    animation-delay: 5.3s;
+}
+
+.image-moving:nth-child(9){
+    width: 80px;
+    height: 80px;
+    left: 10%;
+    animation-duration: 5s;
+    animation-delay: 5.7s;
+}
+
+.image-moving:nth-child(10){
+    width: 80px;
+    height: 80px;
+    left: 42%;
+    animation-duration: 5s;
+    animation-delay: 6.5s;
+}
+
+.image-moving:nth-child(11){
+    width: 80px;
+    height: 80px;
+    left: 66%;
+    animation-duration: 5s;
+    animation-delay: 6.9s;
+}
+
+
+@keyframes image-move {
+    0%{
+        top: -50%;
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    70%{
+        opacity: .4;
+        transform: rotate(180deg);
+    }
+    100%{
+        opacity: 0;
+        top: 85%;
+        transform: rotate(360deg);
+    }
+}
