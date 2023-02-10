@@ -1,0 +1,136 @@
+@import url('https://fonts.cdnfonts.com/css/korean-calligraphy');
+
+.homePage{
+    height: 100%;
+}
+
+.row {
+    margin-bottom: 10px;
+}
+
+.box{
+    position: relative;
+    z-index: 1;
+}
+
+.Menu {
+    position: relative;
+    background-color: white;
+    border: 1px solid;
+    border-color: black;
+    margin-top: 30vh;
+    font-family: 'Korean Calligraphy', sans-serif;
+    border-radius: 10px;
+    z-index: 1;
+    vertical-align: 10%;
+}
+
+.image-moving{
+    position: absolute;
+    bottom: 1000px;
+    z-index: -1;
+    animation: image-move 5s linear infinite ;
+}
+
+.image-moving:nth-child(1){
+    width: min(10vh, 10vw);
+    height: min(10vh, 10vw);
+    left: 5%;
+    animation-duration: 5s;
+    animation-delay: 3s;
+}
+
+.image-moving:nth-child(2){
+    width: min(11vh, 11vw);
+    height: min(11vh, 11vw);
+    left: 35%;
+    animation-duration: 5s;
+    animation-delay: 2s;
+}
+.image-moving:nth-child(3){
+    width: min(10vh, 10vw);
+    height: min(10vh, 10vw);
+    left: 50%;
+    animation-duration: 5s;
+    animation-delay: 2.2s;
+}
+.image-moving:nth-child(4){
+    width: min(12vh, 12vw);
+    height: min(12vh, 12vw);
+    left: 80%;
+    animation-duration: 5s;
+    animation-delay: 3.6s;
+}
+.image-moving:nth-child(5){
+    width: min(13vh, 13vw);
+    height: min(13vh, 13vw);
+    left: 70%;
+    animation-duration: 5s;
+    animation-delay: 4s;
+}
+
+.image-moving:nth-child(6){
+    width: min(15vh, 15vw);
+    height: min(15vh, 15vw);
+    left: 20%;
+    animation-duration: 5s;
+    animation-delay: 4.4s;
+}
+
+.image-moving:nth-child(7){
+    width: min(10vh, 10vw);
+    height: min(10vh, 10vw);
+    left: 40%;
+    animation-duration: 5s;
+    animation-delay: 5s;
+}
+
+.image-moving:nth-child(8){
+    width: min(12vh, 12vw);
+    height: min(12vh, 12vw);
+    left: 70%;
+    animation-duration: 5s;
+    animation-delay: 5.3s;
+}
+
+.image-moving:nth-child(9){
+    width: min(15vh, 15vw);
+    height: min(15vh, 15vw);
+    left: 10%;
+    animation-duration: 5s;
+    animation-delay: 6.2s;
+}
+
+.image-moving:nth-child(10){
+    width: min(12vh, 12vw);
+    height: min(12vh, 12vw);
+    left: 42%;
+    animation-duration: 5s;
+    animation-delay: 8.5s;
+}
+
+.image-moving:nth-child(11){
+    width: min(14vh, 14vw);
+    height: min(14vh, 14vw);
+    left: 66%;
+    animation-duration: 5s;
+    animation-delay: 8s;
+}
+
+
+@keyframes image-move {
+    0%{
+        top: -50%;
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    70%{
+        opacity: .4;
+        transform: rotate(180deg);
+    }
+    100%{
+        opacity: 0;
+        top: 85%;
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,30 @@
+<div class="container text-center homePage">
+    <div [@moveBox]="animateBox ? 'active' : 'inactive'" class="Menu">
+        <h1>{{title}}</h1>
+
+        <div class="row">
+            <button type="button" (click)="animateBox = true" class="btn btn-outline-success offset-4 col-4">Start</button>
+        </div>
+
+        <div class="row">
+            <button class="btn btn-outline-warning offset-4 col-4" data-bs-toggle="collapse" data-bs-target="#Rules" aria-expanded="false" aria-controls="Rules">Rules</button>
+            <div class="collapse" id="Rules">
+                <div class="card card-body">
+                    The player must match 9 cards to win. <br/>
+                    1.    The player will have 2 seconds to memorize the cards and will have 10 seconds to match them. <br/>
+                    2.    The player will have 3 lives, these will be lost for each mistake they make. <br/>
+                    You will win if you manage to match all the cards.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-card-game [ngStyle]="{'display': animateBox ? 'block' : 'none'}" class="box"></app-card-game>
+    
+    <!--Animation-->
+    <div class="images" >
+        <ng-container *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
+            <img class="image-moving" src={{urlImage}} alt="f">
+        </ng-container>
+    </div>
+</div>
