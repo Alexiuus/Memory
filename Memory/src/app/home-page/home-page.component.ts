@@ -14,11 +14,7 @@ import { Component } from '@angular/core';
       ]
 })
 export class homePageComponent {
-    title = 'Memory';
-    urlImage = "../../assets/person.jpg";
-    animateBox = false;
-    displayDiv = false;
-    toggleDiv() {
-      this.displayDiv = !this.displayDiv;
-    }
+    title : String = 'Memory';
+    urlImage : String = "../../assets/person.jpg";
+    animateBox : Boolean = false;
 }
