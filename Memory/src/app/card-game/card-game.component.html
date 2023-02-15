@@ -1,1 +1,12 @@
-<p>card-game works!</p>
+<app-timer [timeLeft]="7"></app-timer>
+<div class="container card-game">
+    <ng-container *ngFor="let i of [0, 1, 2, 3]">
+        <div class="row">
+            <ng-container *ngFor="let j of [0, 1, 2, 3]">
+                <div class="col">
+                    <img class="image-card" src="{{cardsAleatory[j + 4*i]}}" alt="f">
+                </div>
+            </ng-container>
+        </div>
+    </ng-container>
+</div>

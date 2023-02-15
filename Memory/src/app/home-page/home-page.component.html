@@ -18,8 +18,9 @@
             </div>
         </div>
     </div>
-
-    <app-card-game [ngStyle]="{'display': animateBox ? 'block' : 'none'}" class="box"></app-card-game>
+    <div [@moveGame]="animateBox ? 'active' : 'inactive'" class="box">
+        <app-card-game></app-card-game>
+    </div>
     
     <!--Animation-->
     <div class="images" >

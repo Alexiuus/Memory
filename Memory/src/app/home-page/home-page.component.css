@@ -10,7 +10,8 @@
 
 .box{
     position: relative;
-    z-index: 1;
+    top: -1000px;
+    z-index: 2;
 }
 
 .Menu {
