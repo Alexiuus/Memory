@@ -1,0 +1,6 @@
+<button *ngIf="!init || block" (click)="init=true" class="image-button">
+    <img class="image-card" src="{{fontCards}}"  alt="background image">
+</button>
+<button *ngIf="init && !block" (click)="init=false" class="image-button">
+    <img class="image-card" src="{{img}}"  alt="card image">
+</button>

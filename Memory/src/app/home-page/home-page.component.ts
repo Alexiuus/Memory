@@ -25,4 +25,19 @@ export class homePageComponent {
     title : String = 'Memory';
     urlImage : String = "../../assets/person.jpg";
     animateBox : Boolean = false;
+    blockMenu : boolean = false;
+    private timer : number = 1;
+    private interval: any;
+
+    elimHomePage(){
+      this.animateBox = true;
+      this.interval = setInterval(() => {
+        if (this.timer > 0) {
+          this.timer--;
+        } else {
+          this.blockMenu = true;
+          clearInterval(this.interval);
+        }
+      }, 100);
+    }
 }

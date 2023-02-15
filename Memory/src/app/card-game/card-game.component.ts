@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./card-game.component.css'],
 })
 export class CardGameComponent {
+  block : boolean = true;
   cards : string[] = [
     '../../assets/person.jpg',
     '../../assets/person.jpg',
@@ -31,5 +32,8 @@ export class CardGameComponent {
   }
   cardsAleatory : string[] = this.shuffleList(this.cards);
 
+  stateGame(event : string){
+    if(event === 'MEMORY_TIME') this.block = false;
+  }
 
 }

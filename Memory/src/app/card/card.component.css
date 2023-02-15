@@ -1,0 +1,6 @@
+.image-card{
+    width: min(18vh, 18vw);
+    height: min(18vh, 18vw);
+    border-radius: 5px;
+    border: 1px solid black;
+}

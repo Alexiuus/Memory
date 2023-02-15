@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-timer',
@@ -6,14 +6,20 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./timer.component.css']
 })
 export class TimerComponent implements OnInit{
-  @Input() timeLeft:number = 0;
+  @Input() timeInit : number = 0;
+  @Input() timeGame : number = 0;
+  @Output() stateGame = new EventEmitter<string>();;
   interval: any;
 
   ngOnInit() {
     this.interval = setInterval(() => {
-      if (this.timeLeft > 0) {
-        this.timeLeft--;
-      } else {
+      if (this.timeInit > 0) {
+        this.timeInit--;
+      } else if(this.timeGame > 0) {
+        this.stateGame.emit('MEMORY_TIME');
+        this.timeInit = this.timeGame;
+        this.timeGame = 0;
+      } else{
         clearInterval(this.interval);
       }
     }, 1000);

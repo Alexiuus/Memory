@@ -1,9 +1,9 @@
 <div class="container text-center homePage">
-    <div [@moveBox]="animateBox ? 'active' : 'inactive'" class="Menu">
+    <div *ngIf="!blockMenu" [@moveBox]="animateBox ? 'active' : 'inactive'" class="Menu">
         <h1>{{title}}</h1>
 
         <div class="row">
-            <button type="button" (click)="animateBox = true" class="btn btn-outline-success offset-4 col-4">Start</button>
+            <button type="button" (click)="elimHomePage()" class="btn btn-outline-success offset-4 col-4">Start</button>
         </div>
 
         <div class="row">
@@ -18,9 +18,10 @@
             </div>
         </div>
     </div>
-    <div [@moveGame]="animateBox ? 'active' : 'inactive'" class="box">
+    <div *ngIf="animateBox" class="box">
         <app-card-game></app-card-game>
     </div>
+    
     
     <!--Animation-->
     <div class="images" >

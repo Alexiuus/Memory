@@ -6,13 +6,6 @@
     margin-top: 10px;
 }
 
-.image-card{
-    width: min(20vh, 20vw);
-    height: min(20vh, 20vw);
-    border-radius: 5px;
-    border: 1px solid black;
-}
-
 .row{
     margin-top: 5px;
 }

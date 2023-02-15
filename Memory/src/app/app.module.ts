@@ -7,6 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { TimerComponent } from './timer/timer.component';
+import { CardComponent } from './card/card.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { TimerComponent } from './timer/timer.component';
     AppComponent,
     homePageComponent,
     CardGameComponent,
-    TimerComponent
+    TimerComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
