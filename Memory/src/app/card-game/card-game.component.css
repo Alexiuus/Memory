@@ -9,3 +9,9 @@
 .row{
     margin-top: 5px;
 }
+
+.lives{
+    margin-top: 5px;
+    font-family: 'Korean Calligraphy', sans-serif;
+    color: #5b8f13;
+}

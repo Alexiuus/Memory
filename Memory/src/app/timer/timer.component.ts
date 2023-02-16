@@ -8,7 +8,7 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 export class TimerComponent implements OnInit{
   @Input() timeInit : number = 0;
   @Input() timeGame : number = 0;
-  @Output() stateGame = new EventEmitter<string>();;
+  @Output() stateGame = new EventEmitter<string>();
   interval: any;
 
   ngOnInit() {
@@ -16,7 +16,7 @@ export class TimerComponent implements OnInit{
       if (this.timeInit > 0) {
         this.timeInit--;
       } else if(this.timeGame > 0) {
-        this.stateGame.emit('MEMORY_TIME');
+        this.stateGame.emit('GAME_TIME');
         this.timeInit = this.timeGame;
         this.timeGame = 0;
       } else{

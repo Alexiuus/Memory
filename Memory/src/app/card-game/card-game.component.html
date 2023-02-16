@@ -1,11 +1,14 @@
-<div class="box-game">
-    <app-timer [timeInit]="7" [timeGame]="30" (stateGame)="stateGame($event)"></app-timer>
+<div class="box-game container">
+    <div class="row">
+        <app-timer class="offset-4 col-2" [timeInit]="7" [timeGame]="30" (stateGame)="stateGame($event)"></app-timer>
+        <h4 class="lives col-2">Lives: {{totalLives}}</h4>
+    </div>
     <div class="container card-game">
         <ng-container *ngFor="let i of [0, 1, 2, 3]">
             <div class="row">
                 <ng-container *ngFor="let j of [0, 1, 2, 3]">
                     <div class="col">
-                        <app-card [img]="cardsAleatory[j + 4*i]" [block]="block"></app-card>
+                        <app-card [img]="cardsAleatory[j + 4*i]" [state]="state" [init]="state === 'INIT_TIME'" (clickCard)="verifySelect($event)"></app-card>
                     </div>
                 </ng-container>
             </div>

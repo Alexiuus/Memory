@@ -4,3 +4,7 @@
     border-radius: 5px;
     border: 1px solid black;
 }
+.image-button{
+    background-color: transparent;
+    border: 0px;
+}
