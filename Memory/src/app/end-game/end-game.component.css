@@ -1,3 +1,16 @@
+:root{
+    --color-game-over: #8f2626;
+    --color-game-win: #5b8f13;
+}
+
 .end-game{
     font-family: 'Korean Calligraphy', sans-serif;
+}
+
+h4, b{
+    color: #5b8f13;
+}
+
+.game-over{
+    color: #8f2626;
 }

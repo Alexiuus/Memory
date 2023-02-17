@@ -12,9 +12,12 @@ export class EndGameComponent implements OnInit {
   @Input() totalCards : number = 0;
 
   title : string = '';
-
+  isGameOver : boolean = true;
+  
   ngOnInit(){
-    if (this.state === 'GAME_OVER') this.title = 'Game over!';
-    else this.title = "Won";
+    this.isGameOver = (this.state === 'GAME_OVER');
+
+    if (this.isGameOver) this.title = 'Game over!';
+    else this.title = "Won!";
   }
 }

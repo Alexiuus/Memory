@@ -50,6 +50,7 @@ export class CardGameComponent {
   cardsAleatory : string[] = this.shuffleList(this.cards);
 
   stateGame(event : string){
+    this.endGame('GAME_OVER', 'TIME_UP');
     if(event === 'GAME_TIME') this.state = 'GAME_TIME';
     else if(event === 'END_TIME') this.endGame('GAME_OVER', 'TIME_UP');
   }

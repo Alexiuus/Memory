@@ -1,10 +1,10 @@
 <div class="container text-center end-game">
     <div class="modal-header">
-        <h4 class="modal-title offset-4 col-4" align="center">{{title}}</h4>
+        <h4 [class.game-over]="isGameOver" class="modal-title offset-4 col-4">{{title}}</h4>
     </div>
     <div class="modal-body">
-        <p>Total lives: {{lives}}</p>
-        <p>Total cards: {{totalCards}}</p>
+        <p>Total lives: <b [class.game-over]="isGameOver">{{lives}}</b></p>
+        <p>Total cards: <b [class.game-over]="isGameOver">{{totalCards}}</b></p>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-outline-success">New game</button>
