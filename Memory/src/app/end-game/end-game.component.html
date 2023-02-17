@@ -1,0 +1,13 @@
+<div class="container text-center end-game">
+    <div class="modal-header">
+        <h4 [class.game-over]="isGameOver" class="modal-title offset-4 col-4">{{title}}</h4>
+    </div>
+    <div class="modal-body">
+        <p>Total lives: <b [class.game-over]="isGameOver">{{lives}}</b></p>
+        <p>Total cards: <b [class.game-over]="isGameOver">{{totalCards}}</b></p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-success" (click)="eventNextEndGame('NEW_GAME')">New game</button>
+        <button type="button" class="btn btn-outline-warning" (click)="eventNextEndGame('BACK_MENU')">Back to menu</button>
+    </div>
+</div>

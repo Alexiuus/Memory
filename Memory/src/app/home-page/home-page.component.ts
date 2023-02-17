@@ -14,7 +14,39 @@ import { Component } from '@angular/core';
       ]
 })
 export class homePageComponent {
-    title : String = 'Memory';
-    urlImage : String = "../../assets/person.jpg";
-    animateBox : Boolean = false;
+    private title : String = 'Memory';
+    private urlImage : String = "../../assets/person.jpg";
+    private animateBox : Boolean = false;
+    private blockMenu : boolean = false;
+
+    get Title(){
+      return this.title;
+    } 
+
+    get UrlImage(){
+      return this.urlImage;
+    } 
+
+    get AnimateBox(){
+      return this.animateBox;
+    } 
+
+    get BlockMenu(){
+      return this.blockMenu;
+    } 
+
+    
+    elimHomePage(){
+      this.animateBox = true;
+
+      const interval = setInterval(() => {
+          this.blockMenu = true;
+          clearInterval(interval);
+      }, 250);
+    }
+
+    eventEndGame(){
+      this.animateBox = false;
+      this.blockMenu = false;
+    }
 }

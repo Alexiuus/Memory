@@ -1,0 +1,25 @@
+.card-game{
+    border: 1px solid black;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    font-family: 'Korean Calligraphy', sans-serif;
+    margin-top: 10px;
+}
+
+.row{
+    margin-top: 5px;
+}
+
+.lives{
+    margin-top: 5px;
+    font-family: 'Korean Calligraphy', sans-serif;
+    color: #5b8f13;
+}
+
+.one-live{
+    color: #8f2626;
+}
+
+.box-game{
+    background-color: white;
+}

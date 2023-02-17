@@ -6,13 +6,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
+import { TimerComponent } from './timer/timer.component';
+import { CardComponent } from './card/card.component';
+import { EndGameComponent } from './end-game/end-game.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     homePageComponent,
-    CardGameComponent
+    CardGameComponent,
+    TimerComponent,
+    CardComponent,
+    EndGameComponent
   ],
   imports: [
     BrowserModule,
