@@ -19,7 +19,8 @@ export class TimerComponent implements OnInit{
         this.stateGame.emit('GAME_TIME');
         this.timeInit = this.timeGame;
         this.timeGame = 0;
-      } else{
+      } else {
+        this.stateGame.emit('END_TIME');
         clearInterval(this.interval);
       }
     }, 1000);

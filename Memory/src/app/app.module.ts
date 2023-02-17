@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { TimerComponent } from './timer/timer.component';
 import { CardComponent } from './card/card.component';
+import { EndGameComponent } from './end-game/end-game.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { CardComponent } from './card/card.component';
     homePageComponent,
     CardGameComponent,
     TimerComponent,
-    CardComponent
+    CardComponent,
+    EndGameComponent
   ],
   imports: [
     BrowserModule,
