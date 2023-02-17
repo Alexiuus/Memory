@@ -10,34 +10,43 @@ import { Component } from '@angular/core';
           state('inactive', style({ transform: 'translateX(0)' })),
           state('active', style({ transform: 'translatey(-1000px)' })),
           transition('inactive => active', animate('.5s ease-in'))
-        ]),
-        trigger('moveGame', [
-          state('active', style({transform: 'translatey(680px)'})),
-          transition('inactive => active', 
-          [
-            animate(100, style({})),
-            animate(500, style({transform: 'translatey(680px)'}))
-          ]
-        )])
+        ])
       ]
 })
 export class homePageComponent {
-    title : String = 'Memory';
-    urlImage : String = "../../assets/person.jpg";
-    animateBox : Boolean = false;
-    blockMenu : boolean = false;
-    private timer : number = 1;
-    private interval: any;
+    private title : String = 'Memory';
+    private urlImage : String = "../../assets/person.jpg";
+    private animateBox : Boolean = false;
+    private blockMenu : boolean = false;
 
+    get Title(){
+      return this.title;
+    } 
+
+    get UrlImage(){
+      return this.urlImage;
+    } 
+
+    get AnimateBox(){
+      return this.animateBox;
+    } 
+
+    get BlockMenu(){
+      return this.blockMenu;
+    } 
+
+    
     elimHomePage(){
       this.animateBox = true;
-      this.interval = setInterval(() => {
-        if (this.timer > 0) {
-          this.timer--;
-        } else {
+
+      const interval = setInterval(() => {
           this.blockMenu = true;
-          clearInterval(this.interval);
-        }
-      }, 100);
+          clearInterval(interval);
+      }, 250);
+    }
+
+    eventEndGame(){
+      this.animateBox = false;
+      this.blockMenu = false;
     }
 }

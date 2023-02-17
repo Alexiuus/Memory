@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-end-game',
@@ -10,6 +10,7 @@ export class EndGameComponent implements OnInit {
   @Input() type : string = '';
   @Input() lives : number = 0;
   @Input() totalCards : number = 0;
+  @Output() retoreGame = new EventEmitter<string>();
 
   title : string = '';
   isGameOver : boolean = true;
@@ -19,5 +20,9 @@ export class EndGameComponent implements OnInit {
 
     if (this.isGameOver) this.title = 'Game over!';
     else this.title = "Won!";
+  }
+
+  eventNextEndGame(event : string){
+    this.retoreGame.emit(event);
   }
 }

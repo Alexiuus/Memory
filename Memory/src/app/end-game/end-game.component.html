@@ -7,7 +7,7 @@
         <p>Total cards: <b [class.game-over]="isGameOver">{{totalCards}}</b></p>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-outline-success">New game</button>
-        <button type="button" class="btn btn-outline-warning">Back to menu</button>
+        <button type="button" class="btn btn-outline-success" (click)="eventNextEndGame('NEW_GAME')">New game</button>
+        <button type="button" class="btn btn-outline-warning" (click)="eventNextEndGame('BACK_MENU')">Back to menu</button>
     </div>
 </div>

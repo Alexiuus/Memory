@@ -10,8 +10,12 @@ export class CardComponent {
   @Input() state : string = '';
   @Input() init : boolean = true;
   @Output() clickCard = new EventEmitter<string>();
-  fontCards : string = "../../assets/person.jpg";
+  private fontCards : string = "../../assets/person.jpg";
   
+  get FontCards(){
+    return this.fontCards;
+  }
+
   viewFontCard(){
     return !this.init && (this.state == 'GAME_TIME');
   }
