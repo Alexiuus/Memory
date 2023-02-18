@@ -34,6 +34,7 @@
     animation: image-move 5s linear infinite;
 }
 
+
 .image-moving:nth-child(1){
     width: min(10vh, 10vw);
     height: min(10vh, 10vw);

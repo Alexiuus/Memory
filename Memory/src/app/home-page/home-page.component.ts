@@ -42,7 +42,7 @@ export class homePageComponent {
       const interval = setInterval(() => {
           this.blockMenu = true;
           clearInterval(interval);
-      }, 250);
+      }, 400);
     }
 
     eventEndGame(){

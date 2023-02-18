@@ -10,15 +10,20 @@
             <button class="btn btn-outline-warning offset-4 col-4" data-bs-toggle="collapse" data-bs-target="#Rules" aria-expanded="false" aria-controls="Rules">Rules</button>
             <div class="collapse" id="Rules">
                 <div class="card card-body">
-                    The player must match 9 cards to win. <br/>
-                    1.    The player will have 2 seconds to memorize the cards and will have 10 seconds to match them. <br/>
-                    2.    The player will have 3 lives, these will be lost for each mistake they make. <br/>
-                    You will win if you manage to match all the cards.
+                    <p>
+                        The player must match 16 cards in 30 seconds to win. When you start, you will have 5 seconds to memorize the cards.<br/>
+                        You will lose if:<br/>
+                    </p>
+                    <img class='offset-4 col-4' src='../../assets/lives.png' alt="f">
+                    <p><b>You lose 3 lives. You lose 1 life for every mismatch</b>.</p>
+                    <img class='offset-4 col-4' src='../../assets/timer.png' alt="f">
+                    <p><b>The 30 seconds are up</b>.</p>
+                    <p>You will win if you manage to match all the cards.</p>
                 </div>
             </div>
         </div>
     </div>
-    <div *ngIf="AnimateBox" class="box">
+    <div *ngIf="BlockMenu" class="box">
         <app-card-game (event)="eventEndGame()"></app-card-game>
     </div>
     
