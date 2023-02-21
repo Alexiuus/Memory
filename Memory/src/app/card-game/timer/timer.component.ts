@@ -9,7 +9,7 @@ export class TimerComponent implements OnInit{
   @Input() curState : string = 'INIT_GAME';
   @Output() stateGame = new EventEmitter<string>();
   private interval: any;
-  private timeInit : number = 6;
+  private timeInit : number = 11;
   private timeGame : number = 30;
   
   get isTimeInitLessFive(){
@@ -21,7 +21,7 @@ export class TimerComponent implements OnInit{
   }
 
   private resetTimer(){
-    this.timeInit = 5;
+    this.timeInit = 10;
     this.timeGame = 30;
   }
 

@@ -10,7 +10,7 @@ export class CardComponent {
   @Input() state : string = '';
   @Input() init : boolean = true;
   @Output() clickCard = new EventEmitter<string>();
-  private fontCards : string = "../../assets/person.jpg";
+  private fontCards : string = "../../../assets/Naipes/Back.PNG";
   
   get FontCards(){
     return this.fontCards;

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
-import { EndGameComponent } from '../end-game/end-game.component';
+import { EndGameComponent } from './end-game/end-game.component';
 
 @Component({
   selector: 'app-card-game',
@@ -12,22 +12,22 @@ export class CardGameComponent {
   private previusCard = '';
   private totalCardsSelect = 0;
   private cards : string[] = [
-    '../../assets/person.jpg',
-    '../../assets/person2.jpg',
-    '../../assets/person.jpg',
-    '../../assets/person2.jpg',
-    '../../assets/person2.jpg',
-    '../../assets/person2.jpg',
-    '../../assets/person.jpg',
-    '../../assets/person2.jpg',
-    '../../assets/person2.jpg',
-    '../../assets/person2.jpg',
-    '../../assets/person2.jpg',
-    '../../assets/person2.jpg',
-    '../../assets/person2.jpg',
-    '../../assets/person2.jpg',
-    '../../assets/person2.jpg',
-    '../../assets/person2.jpg'
+    '../../../assets/Naipes/Front_1.png',
+    '../../../assets/Naipes/Front_2.png',
+    '../../../assets/Naipes/Front_3.png',
+    '../../../assets/Naipes/Front_4.png',
+    '../../../assets/Naipes/Front_5.png',
+    '../../../assets/Naipes/Front_6.png',
+    '../../../assets/Naipes/Front_7.png',
+    '../../../assets/Naipes/Front_8.png',
+    '../../../assets/Naipes/Front_1.png',
+    '../../../assets/Naipes/Front_2.png',
+    '../../../assets/Naipes/Front_3.png',
+    '../../../assets/Naipes/Front_4.png',
+    '../../../assets/Naipes/Front_5.png',
+    '../../../assets/Naipes/Front_6.png',
+    '../../../assets/Naipes/Front_7.png',
+    '../../../assets/Naipes/Front_8.png'
   ]
   private cardsAleatory : string[] = this.shuffleList(this.cards);
   private totalLives : number = 3;
